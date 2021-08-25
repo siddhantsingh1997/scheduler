@@ -9,15 +9,15 @@ import Validate from "../../utils/validator";
 
 export default function AddMeeting(){
   const [data, setData] = useContext(dataContext);
-  var todayDate = new Date().toISOString().slice(0, 10);
+  
   let meetingData=data;
-  const location = useLocation();
+  
   meetingData.navLabel="Add Meetings";
   setData(meetingData);
   
   function handle() {
   if(data.scheduleData.length>0){
-    console.log("data",data);
+   
     if(data.startTime==="" || data.endTime===""||data.dateText==="" || data.description ===""){
       toast("Please enter all the values");
     } 
